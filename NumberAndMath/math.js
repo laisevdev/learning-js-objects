@@ -18,6 +18,20 @@ console.log(numMax)
 // Crie uma função para limpar os preços
 // e retornar os números com centavos arredondados
 // depois retorne a soma total
-const listaPrecos = ['R$ 59,99', ' R$ 100,222',
-                     'R$ 230  ', 'r$  200'];
+let listaPrecos = ['R$ 59,19', ' R$ 107,02', ' R$ 137,222', ' R$ 10,216',
+                     'R$ 234  ', 'r$  20', 'r$ 324', ' R$ 697,82'];
+
+function limpaPrecos (item) {
+   item = +item.toUpperCase().replaceAll('R$', '').trim().replace(',', '.');
+   item = +item.toFixed(2);
+   return item;
+}
+
+
+let somar = 0;
+listaPrecos.forEach((preco) => {
+   somar += limpaPrecos(preco);
+});
+
+console.log(somar.toLocaleString('pt-Br', {style: 'currency', currency: 'BRL'}));
 
