@@ -19,7 +19,7 @@ console.log(numMax)
 // e retornar os números com centavos arredondados
 // depois retorne a soma total
 let listaPrecos = ['R$ 59,19', ' R$ 107,02', ' R$ 137,222', ' R$ 10,216',
-                     'R$ 234  ', 'r$  20', 'r$ 324', ' R$ 697,82'];
+                     'R$ 234  ', 'r$  10', 'r$  50', 'r$ 324', ' R$ 697,82'];
 
 function limpaPrecos (item) {
    item = +item.toUpperCase().replaceAll('R$', '').trim().replace(',', '.');
